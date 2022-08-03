@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h1>Informações Pessoais</h1>
+
+        <label for="nome">Nome: </label>
+        <input type="text" id="nome" name="nome" placeholder="Digite o seu nome"><br>
+
+        <label>Sexo:</label>
+        <input type="radio" id="msex" value="Masculino">
+        <label for="msex">Masculino</label>
+        <input type="radio" id="fsex" value="Feminino">
+        <label for="fsex">Feminino</label><br>
+
+        <label for="idade">Idade: </label>
+        <input type="number" name="idade" min="0" oninput="validity.valid||(value='');" placeholder="Digite a idade"><br>
+
+        <label for="endereco">Endereço: </label>
+        <input type="text" id="endereco" name="endereco" placeholder="Digite o endereço"><br>
+
+        <label for="cidade">Cidade: </label>
+        <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade"><br>
+
+        <label for="estado">Estado: </label>
+        <select id="estado">
+            <option value="UF">UF</option>
+            <option value="AC">AC</option>
+            <option value="AL">AL</option>
+            <option value="AP">AP</option>
+            <option value="AM">AM</option>
+            <option value="BA">BA</option>
+            <option value="CE">CE</option>
+            <option value="DF">DF</option>
+            <option value="ES">ES</option>
+            <option value="GO">GO</option>
+            <option value="MA">MA</option>
+            <option value="MT">MT</option>
+            <option value="MS">MS</option>
+            <option value="MG">MG</option>
+            <option value="PA">PA</option>
+            <option value="PB">PB</option>
+            <option value="PR">PR</option>
+            <option value="PE">PE</option>
+            <option value="PI">PI</option>
+            <option value="RJ">RJ</option>
+            <option value="RN">RN</option>
+            <option value="RS">RS</option>
+            <option value="RO">RO</option>
+            <option value="RR">RR</option>
+            <option value="SC">SC</option>
+            <option value="SP">SP</option>
+            <option value="SE">SE</option>
+            <option value="TO">TO</option>
+        </select><br>
+
+        <label for="cep">CEP: </label>
+        <input type="text" id="cep" name="cep" placeholder="XXXXX-XXX"><br>
+
+        <label for="telres">Tel/Res: </label>
+        <input type="text" id="telres" name="telres" placeholder="(99) 99999-9999"><br>
+
+        <label for="telcel">Tel/Cel: </label>
+        <input type="text" id="telcel" name="telcel" placeholder="(99) 99999-9999"><br>
+
+        <label for="email">Email: </label>
+        <input type="text" id="email" name="email" placeholder="Digite o endereço de email"><br>
+
+        <input type="submit" value="Incluir">
+        
+    </form>
+</body>
+</html>
