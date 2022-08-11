@@ -1,0 +1,73 @@
+*{
+    background-color: rgb(177, 171, 90);
+}
+#tituloPrincipal {
+    position: absolute;
+    margin-top: -370px;
+    margin-left: 42%;
+    color: #fff;
+    font-size: 65px;
+    background-color: transparent;
+}
+
+[paragrafo=primeiro] {
+    position: absolute;
+    margin-top: -290px;
+    margin-left: 20%;
+    color: #fff;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+[paragrafo="segundo"] {
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 36%;
+    color: #ffffff;
+    font-size: 19px;
+    background-color: transparent;
+}
+
+.par2 {
+    width: 80%;
+    margin-left: 9%;
+    font-size: 17px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+div>p:nth-of-type(2) {
+    width: 80%;
+    margin-left: 9%;
+    font-size: 17px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#divsegunda{
+    margin-top:30px;
+    margin-left: 10%;
+    border: solid;
+    padding: 4px;
+    width: 20%;
+
+}
+.carreira{
+    margin-left: 15px;
+}
+.titulolista{
+    margin-left: -33px;
+}
+#listaTemp{
+    padding: 10px;
+    margin-left: 50px;
+}
+.par3{
+    width: 40%;
+    margin-left: 20%;
+    color:black;
+    font-size: 18px;
+}
+#irmaoPar3{
+    width: 40%;
+    margin-left: 20%;
+    color:black;
+    font-size: 18px;
+}
