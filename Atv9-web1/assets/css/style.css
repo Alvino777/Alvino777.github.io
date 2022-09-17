@@ -1,0 +1,38 @@
+
+.app {
+    background: #f1f1f1;
+    display: grid;  
+    font-family: Arial, Helvetica, sans-serif;   
+    grid-template-areas: 'cabecalho' 'conteudo' 'rodape' ;
+}
+
+.cabecalho {
+   
+    display: flex;
+    height: 90px;
+    width: 200px;
+    font-size:27px;
+}
+ 
+.conteudo {
+    /* border: solid 1px red; */
+    grid-area:  conteudo;
+    display: grid;
+    grid-template-rows: 100vh;
+    margin-top: -15px;
+}
+
+.rodape {
+    /* border: solid 1px blue; */
+    grid-area:  rodape;
+    display: grid;
+    grid-template-rows: 60px;
+}
+.rodape {
+    display: flex;
+    justify-content: center;
+    background: rgb(239, 232, 232);
+    color: black;
+    font-size: 0.8rem;
+    padding: 1rem;
+}
