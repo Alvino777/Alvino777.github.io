@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+<body>
+    <script>
+        const tipoInvestimento = Number(prompt("Insira um tipo de investimento (Tipo - 1 Poupança - 5% ou Tipo - 2 Fundo de renda fixa - 10%): "));
+        let valorInvestimento = Number(prompt("Insira o valor do investimento: R$ "));
+        const poupanca = 1.05;
+        const fundoRendaFixa = 1.10;
+
+        if(tipoInvestimento != 1 && tipoInvestimento != 2){
+            alert("Opção inválida!");
+        }
+
+        if(tipoInvestimento == 1){
+            valorInvestimento = valorInvestimento * poupanca;
+        }
+
+        if(tipoInvestimento == 2){
+            valorInvestimento = valorInvestimento * fundoRendaFixa;
+        }
+
+        alert(`Valor retornado de acordo com o investimento desejado: R$ ${valorInvestimento.toFixed(2)}`);
+    </script>
+</body>
+</html>

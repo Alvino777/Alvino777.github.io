@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4</title>
+</head>
+<body>
+    <script>
+        const nomeCliente = prompt("Digite o seu nome: ");
+        const compraEfetuada = Number(prompt("Digite o valor da compra efetuada: R$ "));
+        let desconto = 0;
+
+        if(compraEfetuada <= 200){
+            desconto = 0.10;
+        }
+        if(compraEfetuada > 200 && compraEfetuada <= 500){
+            desconto = 0.15;
+        }
+        if(compraEfetuada > 500){
+            desconto = 0.20;
+        }
+
+        let descontoPreco = compraEfetuada * desconto;
+        let valorFinal = compraEfetuada - descontoPreco;
+
+        alert(`Obrigado por comprar conosco ${nomeCliente}!!\n
+        O valor da sua compra foi de R$${compraEfetuada.toFixed(2)}\n
+        Entretanto, para lhe agradar demos um desconto de ${desconto*100}%\n
+        Com isso, o valor final da sua compra ficou em R$${valorFinal.toFixed(2)}!!`);
+    </script>
+</body>
+</html>

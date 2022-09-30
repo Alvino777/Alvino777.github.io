@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 6</title>
+</head>
+<body>
+    <script>
+        const valorEntrada = 20;
+        const peixeExtra = 12;
+        const numeroPessoas = Number(prompt("Quantas pessoas da familia foram ao clube?"))
+        const numeroPeixes = Number(prompt("Quantos peixes a familia obteve na pescaria?"))
+        const precoEntrada = numeroPessoas * valorEntrada;
+        const precoExtra = (numeroPeixes - numeroPessoas) * peixeExtra;
+        const valorTotal = precoEntrada + precoExtra;
+
+        if(numeroPeixes <= 0){
+            if(numeroPessoas <= 0){
+                alert("Pelo visto pescaria não está tão em alta.")
+                end()
+            }
+            if(numeroPessoas > 0){
+                alert(`A familia precisa treinar mais pescaria!\nValor a pagar: R$${precoEntrada.toFixed(2)}`)
+                end()
+            }
+        }
+
+        if(numeroPeixes > 0){
+            if(numeroPessoas <= 0){
+                alert(`O mundo está atualizado, os peixes estão pescando eles mesmos!`);
+                end()
+            }
+            if(numeroPessoas > 0){
+                alert(`O valor total a pagar, com a entrada + peixes extras (caso existam), é: R$${valorTotal}`)
+                end()
+            }
+        }
+
+    </script>
+</body>
+</html>

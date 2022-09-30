@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 5</title>
+</head>
+<body>
+    <script>
+        const numeroDigitado = Number(prompt("Digite um número (centena de preferência): "));
+        const negativeNumber = numeroDigitado * -1;
+
+        if(numeroDigitado < 100 || numeroDigitado > 999){
+            alert("Tem algo contra preferências?");
+            end();
+        }
+
+        function stringReversa(number) {
+            return number.split("-").reverse().join("");
+        }
+
+        const numeroInvertido = stringReversa(numeroDigitado.toString());
+        
+        alert(`Estava na dúvida se era número negativo: ${negativeNumber}\nOu número invertido literalmente: ${numeroInvertido}`)
+    </script>
+</body>
+</html>

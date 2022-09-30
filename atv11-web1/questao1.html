@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 1</title>
+</head>
+<body>
+    <script>
+        const precoProduto = Number(prompt("Insira o preço do produto: "));
+        const descontoPercent = 0.05;
+        const descontoProduto = precoProduto * descontoPercent;
+        const precoFinal = precoProduto - descontoProduto;
+        
+        function caroBarato(valorProduto){
+            if(valorProduto > 500){
+                return "CARO";
+            }
+            if(valorProduto < 500){
+                return "BARATO";
+            }
+            if(valorProduto == 500){
+                return "MEIO TERMO";
+            }
+        }
+
+        let custoBeneficio = caroBarato(precoFinal)
+
+        alert(`Novo preco: R$ ${precoFinal.toFixed(2)} ${custoBeneficio}`);
+    </script>
+</body>
+</html>

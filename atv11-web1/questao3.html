@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3</title>
+</head>
+<body>
+    <script>
+        const sexo = Number(prompt("Qual o seu sexo?(Digite 1 para masculino, e 2 para feminino)"));
+
+        if(sexo != 1 && sexo != 2){
+            alert("Opção inválida!");
+            exit()
+        }
+
+        const altura = Number(prompt("Qual a sua altura? (ex: 1.77)"));
+        let pesoIdeal = 0;
+
+
+        if(sexo == 1){
+            pesoIdeal = (72 * altura) - 58;
+        }
+
+        if(sexo == 2){
+            pesoIdeal = (62 * altura) - 44;
+        }
+
+        alert(`O seu peso ideal é: ${pesoIdeal}`);
+    </script>
+</body>
+</html>
