@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 5</title>
+</head>
+<body>
+    <script>
+
+        let valorTotal = Number(prompt("Informe o valor total da conta em R$: "));
+        let numParcelas = Number(prompt("Informe o número de parcelas desejado (em boletos ou carnê): "));
+        let somaCentavos = 0;
+        let valorParcela = valorTotal / numParcelas;
+        let integerValue;
+        let listaParcelas = [];
+        
+        function extraiDecimal(valor){
+            let decimal = valor * 10 % 10 / 10; //caso o número seja 5.10, a função irá me retornar 0.10
+            return decimal;
+        }
+
+        let totalCentavos = extraiDecimal(valorParcela) * numParcelas;
+        
+        for(let i = 1; i <= numParcelas; i++){
+
+            if(i != numParcelas){
+                integerValue = Math.floor(valorParcela);
+                listaParcelas.push(integerValue);
+            }else{
+                integerValue = Math.floor(valorParcela) + totalCentavos;
+                listaParcelas.push(integerValue);
+            }
+
+        }
+        alert(`O valor das primeiras ${numParcelas-1}x será de R$ ${listaParcelas[0].toFixed(2)} !!
+        \n E o valor da última parcela será de R$ ${listaParcelas[listaParcelas.length - 1].toFixed(2)}`)
+    </script>
+</body>
+</html>

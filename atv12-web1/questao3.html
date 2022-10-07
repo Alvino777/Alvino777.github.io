@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3</title>
+</head>
+<body>
+    <script>
+        let totalCompra = Number(prompt("Insira o valor total da compra em R$: "));
+        
+        let maxParcelas = 6;
+        let valorParcela = totalCompra / maxParcelas;
+        let valRound = Math.floor(valorParcela*100)/100;
+        
+        while(true){
+
+            if(valRound * maxParcelas != totalCompra){
+                valorParcela = 0;
+                maxParcelas--;
+                valorParcela = totalCompra / maxParcelas;
+            }
+
+            if(maxParcelas == 0){
+                alert(`O valor não atende os requisitos para ser parcelado em 6x com minimo de 20 reais!`);
+                break;
+            }
+
+            if(valRound <= 20){
+                alert(`O número de parcelas será ${maxParcelas}x, e o valor de cada parcela será R$${valorParcela.toFixed(2)}`)
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

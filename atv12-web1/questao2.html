@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+<body>
+    <script>
+        let valorTotal = 0;
+        let fogeEscopo = false;
+
+        do{
+            let condicao = prompt('Deseja fazer um novo lançamento? (digite s ou n): ')
+            if(condicao != 's'){
+                break;
+            }
+            let valorProduto = Number(prompt('Digite o valor do produto R$: '))
+            valorTotal += valorProduto
+        }while(true)
+        
+        if(valorTotal == 0){
+            end()
+        }
+
+        let valorPago = Number(prompt(`O valor total foi R$ ${valorTotal.toFixed(2)}, qual o valor da sua nota? `))
+
+        if(valorPago > valorTotal){
+            alert(`O seu troco será R$ ${(valorPago - valorTotal).toFixed(2)}`)
+        }else if(valorPago == valorTotal){
+            alert("Você não receberá troco!")
+        }else{
+            alert("Está faltando dinheiro, por favor desembolse mais notas!")
+        }
+    </script>
+</body>
+</html>
