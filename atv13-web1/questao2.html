@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+<body>
+    <script>
+        let numberInputs = 11
+        let arrayA = []
+        let arrayM = []
+        let x = 0
+        let msg = ''
+
+        for(let i = 0; i < numberInputs; i++){
+            let input = Number(prompt("Insira um número (será solicitado 11 números):"))
+            arrayA.push(input) 
+        }
+        
+        x = arrayA[numberInputs - 1]
+        arrayA.pop()
+
+        arrayA.forEach(num => {
+            arrayM.push(num*x)
+        })
+
+        msg += `Os valores inseridos no array A foram: ${arrayA}.\n`;
+        msg += `O valor do multiplicador X é: ${x}.\n`
+        msg += `Os valores multiplicados, armazenados no array M, são: ${arrayM}.\n`
+
+        alert(msg)
+    </script>
+</body>
+</html>

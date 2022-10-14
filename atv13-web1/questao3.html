@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3</title>
+</head>
+<body>
+    <script>
+        let diaSemana = ['segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado', 'domingo'];
+        let quantidadeDiaSemana = diaSemana.length
+        let allTemp = []
+        let msg = ''
+
+        for(let i = 0; i < quantidadeDiaSemana; i++){
+            let temperaturaDia = Number(prompt(`Qual foi a temperatura média de ${diaSemana[i]}?`))
+            allTemp.push(temperaturaDia)
+        }
+
+        msg += `A menor temperatura da semana foi: ${Math.min(...allTemp)} graus!\n`
+        msg += `A maior temperatura da semana foi: ${Math.max(...allTemp)} graus!\n`
+
+        alert(msg)
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4</title>
+</head>
+<body>
+    <script>
+        let listaAlunos = []
+        let listaNotas = []
+        let allNotas = []
+        let dados = []
+        while(true){
+            let nomeAluno = prompt("Digite o nome do aluno (para sair digite 'fim'): ")
+
+            if(nomeAluno.toLowerCase() == 'fim'){
+                break
+            }
+
+            let notaAluno = Number(prompt("Digite a nota do aluno: "))
+
+            listaAlunos.push(nomeAluno)
+            listaNotas.push(notaAluno)
+        }
+        for(let i = 0; i < listaAlunos.length; i++){
+            dados[i] = [
+                {
+                    nome: listaAlunos[i],
+                    nota: listaNotas[i]
+                }
+            ]
+        }
+        dados.forEach(a => {
+            allNotas.push(a[0].nota);
+        })
+
+        let maxNota = Math.max(...allNotas);
+        let arr = dados.filter(a => a[0].nota >= 7);
+
+        let melhoresAlunos = []
+
+        arr.forEach(aluno => {
+            melhoresAlunos.push(aluno[0].nome)
+        })
+        
+
+        if(arr.length <= 0){
+            alert("Não há alunos em destaque na turma!")
+        }else{
+            alert(`A maior nota da turma foi ${maxNota}!!\nOs alunos que obtiveram a maiores notas foram: ${melhoresAlunos}.`)
+        }
+    </script>
+</body>
+</html>
